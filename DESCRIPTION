@@ -1,0 +1,11 @@
+Package: fibconsensus.shiny
+Type: Shiny
+Title: FibConsensus Explorer
+Version: 0.1.0
+Authors@R: person("Juan", "Ruano", role = c("aut", "cre"))
+Description: Modular Shiny application for the FibConsensus resource.
+License: MIT
+Encoding: UTF-8
+Imports:
+    shiny,
+    bslib

@@ -1,0 +1,359 @@
+
+/* --------------------------------------------------------------------------
+   Population Explorer
+   -------------------------------------------------------------------------- */
+
+.module-header {
+  margin: 1.5rem 0 1.25rem;
+}
+
+.module-header h1 {
+  margin: 0.15rem 0 0.35rem;
+  color: #24463D;
+  font-size: 2rem;
+  font-weight: 750;
+}
+
+.module-header p {
+  max-width: 760px;
+  color: #5A6E65;
+  font-size: 1rem;
+}
+
+.filter-card {
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+}
+
+.filter-card .form-group {
+  margin-bottom: 1rem;
+}
+
+.population-result-summary {
+  margin: 0 0 0.75rem 0.2rem;
+  color: #5A6E65;
+}
+
+.population-result-summary strong {
+  color: #24463D;
+  font-size: 1.1rem;
+}
+
+.population-table-card {
+  overflow: hidden;
+}
+
+.confidence-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.confidence-high {
+  color: #24523F;
+  background: #DCEDE4;
+}
+
+.confidence-moderate {
+  color: #6B561A;
+  background: #F4EBCB;
+}
+
+.confidence-low {
+  color: #7A4338;
+  background: #F3DFD9;
+}
+
+.confidence-unknown {
+  color: #5F6D67;
+  background: #E9EEEB;
+}
+
+.population-detail-card {
+  margin-top: 1rem;
+}
+
+.population-detail-empty {
+  min-height: 130px;
+}
+
+.population-detail-empty > div {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  justify-content: center;
+  color: #6B7D73;
+}
+
+.population-detail-heading {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.population-detail-heading h2 {
+  margin: 0.1rem 0 0;
+  color: #24463D;
+  font-size: 1.35rem;
+}
+
+.detail-kicker {
+  color: #6B7D73;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.population-metadata {
+  grid-template-columns: minmax(110px, auto) 1fr;
+}
+
+.population-metadata dd {
+  overflow-wrap: anywhere;
+}
+
+.population-count-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.population-count-grid > div {
+  display: grid;
+  padding: 0.75rem;
+  border: 1px solid #D8E5DE;
+  border-radius: 10px;
+  background: #F7FAF8;
+  text-align: center;
+}
+
+.population-count-grid strong {
+  color: #24463D;
+  font-size: 1.35rem;
+}
+
+.population-count-grid small {
+  color: #6B7D73;
+}
+
+.population-interpretation {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-left: 3px solid #7DA58F;
+  background: #F7FAF8;
+}
+
+.population-interpretation h4 {
+  margin: 0 0 0.35rem;
+  color: #2F5D50;
+  font-size: 0.95rem;
+  font-weight: 750;
+}
+
+.population-interpretation p {
+  margin: 0;
+  color: #3E544B;
+  line-height: 1.55;
+}
+
+@media (max-width: 992px) {
+  .filter-card {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .population-count-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .population-detail-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* ============================================================
+   Population record — confidence-based colour accents
+   ============================================================ */
+
+.population-detail-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #d8e5de;
+  background: #ffffff;
+}
+
+/* Barra de color superior */
+.population-detail-card::before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 100%;
+  background: #9aa8a2;
+}
+
+/* Se aplica según la confianza presente dentro de la tarjeta */
+.population-detail-card:has(.confidence-high)::before {
+  background: #2f7d5c;
+}
+
+.population-detail-card:has(.confidence-moderate)::before {
+  background: #c58a22;
+}
+
+.population-detail-card:has(.confidence-low)::before {
+  background: #b34b4b;
+}
+
+.population-detail-card:has(.confidence-unknown)::before {
+  background: #87938e;
+}
+
+
+/* Encabezado suavemente tintado */
+.population-detail-card:has(.confidence-high) .card-header {
+  background: #eef8f2;
+}
+
+.population-detail-card:has(.confidence-moderate) .card-header {
+  background: #fff8e8;
+}
+
+.population-detail-card:has(.confidence-low) .card-header {
+  background: #fff0f0;
+}
+
+.population-detail-card:has(.confidence-unknown) .card-header {
+  background: #f3f5f4;
+}
+
+
+/* Badge de confianza */
+.confidence-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  border: 1px solid transparent;
+}
+
+.confidence-high {
+  color: #1f6548;
+  background: #dff3e7;
+  border-color: #acd6bd;
+}
+
+.confidence-moderate {
+  color: #815a12;
+  background: #fff0c7;
+  border-color: #e8ca7b;
+}
+
+.confidence-low {
+  color: #8a3333;
+  background: #f9dddd;
+  border-color: #dda7a7;
+}
+
+.confidence-unknown {
+  color: #59645f;
+  background: #e9eeeb;
+  border-color: #cad2ce;
+}
+
+
+/* Títulos de sección */
+.population-detail-section-title {
+  color: #315f54;
+  font-weight: 700;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #dce8e2;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+
+/* Marcadores como chips */
+.population-marker-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.population-marker-chip {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.08rem;
+  min-width: 105px;
+  padding: 0.48rem 0.65rem;
+  border-radius: 9px;
+  background: #edf5f1;
+  border: 1px solid #cfe1d8;
+}
+
+.population-marker-chip strong {
+  color: #244f43;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+.population-marker-chip small {
+  color: #60746c;
+  font-size: 0.72rem;
+}
+
+
+/* Evidencia */
+.population-evidence-item {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  border-left: 4px solid #5f8e7d;
+  background: #f6faf8;
+}
+
+.population-evidence-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.population-evidence-statement {
+  margin-bottom: 0.3rem;
+}
+
+
+/* Botones DOI / PubMed */
+.population-publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.population-publication-links .btn-primary {
+  background: #315f54;
+  border-color: #315f54;
+}
+
+.population-publication-links .btn-primary:hover {
+  background: #244b42;
+  border-color: #244b42;
+}

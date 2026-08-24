@@ -1,0 +1,1047 @@
+:root {
+  --fib-green-900: #1F3B33;
+  --fib-green-800: #24463D;
+  --fib-green-700: #2F5D50;
+  --fib-green-600: #3F735F;
+  --fib-green-500: #5D8A72;
+  --fib-green-400: #789F8B;
+  --fib-green-300: #A7C0B2;
+  --fib-green-200: #D7E5DD;
+  --fib-green-100: #EEF5F1;
+  --fib-green-050: #F7FAF8;
+  --fib-text: #23352E;
+  --fib-muted: #64756C;
+  --fib-white: #FFFFFF;
+  --fib-shadow: 0 10px 28px rgba(31, 59, 51, 0.10);
+  --fib-radius-lg: 18px;
+  --fib-radius-md: 12px;
+}
+
+html, body {
+  color: var(--fib-text);
+  background: var(--fib-green-050);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.navbar {
+  min-height: 76px;
+  background: var(--fib-green-800) !important;
+  box-shadow: 0 3px 16px rgba(31, 59, 51, 0.18);
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255,255,255,0.88) !important;
+  font-weight: 600;
+  padding: 1.55rem 0.85rem 1.25rem !important;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar-nav .nav-link.active {
+  color: #BFE1CF !important;
+  border-bottom-color: #7FC5A1;
+}
+
+/* --------------------------------------------------------------------------
+   Application brand
+   -------------------------------------------------------------------------- */
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-right: 1.25rem;
+  text-decoration: none;
+}
+
+.app-brand-logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.app-brand-copy {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.app-brand-title {
+  display: inline-flex;
+  align-items: baseline;
+  color: var(--fib-white);
+  font-size: 1.18rem;
+  font-weight: 750;
+  letter-spacing: -0.015em;
+  white-space: nowrap;
+}
+
+.brand-fib {
+  color: #D5ECDD;
+}
+
+.brand-consensus {
+  color: #91CBAA;
+}
+
+.hero-panel {
+  margin: 1.2rem 0 1.25rem;
+  padding: 2rem 2.4rem;
+  color: white;
+  border-radius: var(--fib-radius-lg);
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(167,192,178,0.28),
+      transparent 32%
+    ),
+    linear-gradient(
+      120deg,
+      var(--fib-green-900),
+      var(--fib-green-600)
+    );
+  box-shadow: var(--fib-shadow);
+}
+
+.hero-kicker {
+  margin-bottom: 0.55rem;
+  color: #BFE1CF;
+  font-size: 0.74rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.hero-panel h1 {
+  max-width: 950px;
+  margin: 0 0 0.55rem;
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 680;
+  line-height: 1.03;
+}
+
+.hero-panel p {
+  max-width: 850px;
+  margin: 0;
+  color: rgba(255,255,255,0.90);
+  font-size: 1.02rem;
+}
+
+.card, .value-box {
+  border: 1px solid var(--fib-green-200);
+  border-radius: var(--fib-radius-md);
+  background: white;
+  box-shadow: 0 5px 16px rgba(31,59,51,0.06);
+}
+
+.card-header {
+  color: var(--fib-green-800);
+  background: transparent;
+  border-bottom: 1px solid var(--fib-green-200);
+  font-weight: 700;
+}
+
+.kpi-card {
+  min-height: 160px;
+  background: linear-gradient(180deg, white, var(--fib-green-100));
+}
+
+.kpi-card .value-box-title {
+  color: var(--fib-green-700);
+  font-weight: 700;
+}
+
+.kpi-card .value-box-value {
+  color: var(--fib-green-900);
+  font-size: 2.8rem;
+  font-weight: 760;
+}
+
+.overview-card, .release-card {
+  min-height: 250px;
+}
+
+.principles-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 0.65rem 1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.principles-list li {
+  padding: 0.7rem 0.85rem;
+  color: var(--fib-green-800);
+  background: var(--fib-green-100);
+  border: 1px solid var(--fib-green-200);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  gap: 0.55rem 1rem;
+  margin: 0;
+}
+
+.detail-grid dt {
+  color: var(--fib-green-700);
+  font-weight: 700;
+}
+
+.app-footer {
+  width: 100%;
+  margin-top: 2.5rem;
+  padding: 1.25rem;
+  color: var(--fib-muted);
+  background: white;
+  border-top: 1px solid var(--fib-green-200);
+}
+
+.app-footer-inner {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  color: var(--fib-green-700);
+  font-weight: 750;
+}
+
+@media (max-width: 768px) {
+  .hero-panel { padding: 1.5rem; }
+  .principles-list { grid-template-columns: 1fr; }
+  .detail-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================
+   Overview hero
+   ========================================================== */
+
+.overview-hero {
+  max-width: 1200px;
+  margin: 1rem auto 2rem;
+}
+
+.overview-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(31,59,51,.10);
+}
+
+
+/* ==========================================================
+   Hero buttons
+   ========================================================== */
+
+.overview-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.overview-hero-button {
+  min-width: 190px;
+}
+
+
+/* ==========================================================
+   Workflow image
+   ========================================================== */
+
+.overview-workflow-frame {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overview-workflow-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(31,59,51,.08);
+}
+
+@media (max-width: 768px) {
+  .app-brand {
+    gap: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .app-brand-logo {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .app-brand-title {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   FibConsensus v2.2 explorer polish
+   ============================================================ */
+.fc-page-head { margin-bottom: 1.1rem; }
+.fc-explorer-stack { display:flex; flex-direction:column; gap:1rem; }
+.fc-filter-title {
+  font-weight:700; font-size:.78rem; text-transform:uppercase;
+  letter-spacing:.06em; margin-bottom:.8rem; color:#2F5D50;
+}
+.fc-record-count {
+  font-size:.84rem; font-weight:600; color:#5f746b;
+  background:#eef5f1; border:1px solid #d7e5dd;
+  border-radius:999px; padding:.25rem .65rem;
+}
+.fc-table-card .card-body { padding:.4rem .65rem .75rem; }
+.fc-detail-card .card-body { padding:1.1rem 1.25rem; }
+.fc-detail-grid {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem 1.25rem;
+}
+.fc-detail-wide { grid-column:1 / -1; }
+.fc-detail-item {
+  border:1px solid #e0ebe5; border-radius:10px;
+  padding:.85rem 1rem; background:#fbfdfc;
+}
+.fc-detail-label {
+  text-transform:uppercase; letter-spacing:.045em;
+  font-size:.72rem; font-weight:700; color:#668077;
+  margin-bottom:.28rem;
+}
+.fc-detail-value { color:#263a32; line-height:1.45; overflow-wrap:anywhere; }
+.fc-empty-state {
+  min-height:120px; display:flex; align-items:center; justify-content:center;
+  flex-direction:column; gap:.55rem; color:#75887f;
+}
+.fc-concept-card { min-height:190px; }
+.fc-concept-card p { color:#536960; line-height:1.5; }
+.fc-concept-metric {
+  margin-top:auto; font-size:.88rem; font-weight:700; color:#2F5D50;
+}
+.fc-relationship-head {
+  display:grid; grid-template-columns:1fr 50px 1fr; gap:1rem;
+  align-items:center; border:1px solid #d7e5dd; border-radius:12px;
+  padding:1rem 1.15rem; background:#f7faf8;
+}
+.fc-rel-study {
+  font-size:.75rem; font-weight:700; color:#668077;
+  text-transform:uppercase; letter-spacing:.035em;
+}
+.fc-rel-pop { font-size:1rem; font-weight:650; color:#263a32; margin-top:.2rem; }
+.fc-rel-arrow { display:flex; justify-content:center; color:#5D8A72; }
+.fc-badge-row { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.8rem; }
+.fc-badge {
+  display:inline-flex; align-items:center; border-radius:999px;
+  padding:.3rem .7rem; font-size:.76rem; font-weight:700;
+  background:#eef2f0; color:#486159; border:1px solid #d6e1dc;
+}
+.fc-badge-primary { background:#e6f2ec; color:#2F5D50; border-color:#bcd4c8; }
+
+table.dataTable tbody td { vertical-align:top !important; }
+table.dataTable tbody tr:hover { background:#f0f6f3 !important; }
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  border-radius:8px !important;
+}
+@media (max-width: 900px) {
+  .fc-detail-grid { grid-template-columns:1fr; }
+  .fc-detail-wide { grid-column:auto; }
+  .fc-relationship-head { grid-template-columns:1fr; }
+  .fc-rel-arrow { transform:rotate(90deg); }
+}
+
+/* BEGIN FibConsensus v2.3 scientific explorer */
+
+.fc-population-profile,
+.fc-gene-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fc-population-hero,
+.fc-gene-hero {
+  padding: 1.15rem 1.25rem;
+  border: 1px solid rgba(49, 84, 72, .14);
+  border-radius: 14px;
+  background: rgba(255,255,255,.28);
+}
+
+.fc-population-hero h2,
+.fc-gene-hero h2 {
+  margin: .15rem 0 .75rem;
+  color: #263d34;
+  font-size: 1.5rem;
+  line-height: 1.22;
+  font-weight: 650;
+}
+
+.fc-badge-row,
+.fc-marker-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .42rem;
+}
+
+.fc-soft-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: .28rem .62rem;
+  border-radius: 999px;
+  border: 1px solid rgba(63, 110, 91, .15);
+  background: rgba(90, 145, 122, .10);
+  color: #45685a;
+  font-size: .83rem;
+  line-height: 1.25;
+}
+
+.fc-marker-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .30rem .62rem;
+  border-radius: 7px;
+  border: 1px solid rgba(67, 109, 92, .16);
+  background: rgba(255,255,255,.48);
+  color: #36584b;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: .83rem;
+  font-weight: 650;
+}
+
+.fc-science-section {
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(49, 84, 72, .12);
+  border-radius: 13px;
+  background: rgba(255,255,255,.18);
+}
+
+.fc-science-title {
+  margin-bottom: .66rem;
+  color: #54766a;
+  font-size: .76rem;
+  font-weight: 750;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.fc-science-text {
+  color: #2a4037;
+  line-height: 1.58;
+}
+
+.fc-publication-title {
+  margin-bottom: .38rem;
+  color: #263d34;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.fc-publication-meta {
+  color: #5a7067;
+  line-height: 1.45;
+}
+
+.fc-doi-link,
+.fc-mini-doi {
+  color: #34735c;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.fc-doi-link {
+  display: inline-block;
+  margin-top: .58rem;
+}
+
+.fc-doi-link:hover,
+.fc-mini-doi:hover {
+  text-decoration: underline;
+}
+
+.fc-muted {
+  color: #788a82;
+  font-style: italic;
+}
+
+.fc-gene-statline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  color: #5a7067;
+}
+
+.fc-gene-evidence-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.fc-gene-evidence-row {
+  display: grid;
+  grid-template-columns:
+    minmax(145px, .75fr)
+    minmax(190px, 1.05fr)
+    minmax(210px, 1.25fr)
+    minmax(120px, .8fr)
+    auto;
+  gap: .7rem;
+  align-items: center;
+  padding: .72rem .25rem;
+  border-bottom: 1px solid rgba(50, 84, 72, .10);
+}
+
+.fc-gene-evidence-row:last-child {
+  border-bottom: 0;
+}
+
+.fc-gene-evidence-study {
+  color: #355b4d;
+  font-weight: 650;
+}
+
+.fc-gene-evidence-pop {
+  color: #293f36;
+  font-weight: 550;
+}
+
+.fc-gene-evidence-role {
+  color: #64786f;
+  font-size: .88rem;
+  line-height: 1.35;
+}
+
+.fc-mini-doi {
+  white-space: nowrap;
+  font-size: .82rem;
+}
+
+.fc-table-card table.dataTable tbody td {
+  vertical-align: top;
+}
+
+.fc-table-card table.dataTable tbody td:nth-child(5) {
+  white-space: normal;
+  line-height: 1.35;
+}
+
+@media (max-width: 1000px) {
+  .fc-gene-evidence-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* END FibConsensus v2.3 scientific explorer */
+
+
+/* BEGIN FibConsensus v2.3 Nature palette */
+
+/*
+FibConsensus editorial palette
+------------------------------
+Ink / fibroblast       #243B6B
+Teal                   #59B3C1
+Leaf                   #A9C94A
+Magenta                #B65B9E
+Orange                 #E4863A
+Violet                 #8B74C7
+
+The palette is intentionally used as accents rather than large saturated
+surfaces, preserving a restrained journal-style scientific interface.
+*/
+
+:root {
+  --fc-ink: #243B6B;
+  --fc-ink-dark: #1D315A;
+  --fc-teal: #59B3C1;
+  --fc-teal-dark: #347F8C;
+  --fc-leaf: #A9C94A;
+  --fc-leaf-dark: #6E8D20;
+  --fc-magenta: #B65B9E;
+  --fc-magenta-dark: #843F73;
+  --fc-orange: #E4863A;
+  --fc-orange-dark: #A85B1E;
+  --fc-violet: #8B74C7;
+  --fc-violet-dark: #6651A3;
+
+  --fc-text: #293B35;
+  --fc-muted-text: #61766D;
+
+  --fc-page: #F7FAF8;
+  --fc-card: #FFFFFF;
+  --fc-line: #DCE7E2;
+
+  --fc-blue-wash: #EFF3FA;
+  --fc-teal-wash: #EEF8F8;
+  --fc-green-wash: #F4F8E9;
+  --fc-magenta-wash: #FAF1F7;
+  --fc-orange-wash: #FCF4EC;
+  --fc-violet-wash: #F4F1FA;
+}
+
+
+/* ------------------------------------------------------------------
+   Global surfaces
+   ------------------------------------------------------------------ */
+
+body {
+  background:
+    linear-gradient(
+      180deg,
+      #FAFCFB 0%,
+      var(--fc-page) 100%
+    );
+}
+
+.card {
+  border-color: var(--fc-line);
+  box-shadow:
+    0 1px 2px rgba(35,59,107,.02),
+    0 8px 28px rgba(31,64,51,.035);
+}
+
+.card-header {
+  color: #294A3F;
+  border-bottom-color: var(--fc-line);
+}
+
+
+/* ------------------------------------------------------------------
+   Page title accents
+   ------------------------------------------------------------------ */
+
+.fc-page-head {
+  position: relative;
+}
+
+.fc-page-head::before {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 4px;
+  margin-bottom: .72rem;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      var(--fc-ink) 0 25%,
+      var(--fc-teal) 25% 45%,
+      var(--fc-leaf) 45% 62%,
+      var(--fc-orange) 62% 78%,
+      var(--fc-magenta) 78% 100%
+    );
+}
+
+.fc-section-kicker {
+  color: #52776A;
+}
+
+
+/* ------------------------------------------------------------------
+   Value boxes
+   ------------------------------------------------------------------ */
+
+.fc-value-box {
+  overflow: hidden;
+  position: relative;
+}
+
+.fc-value-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+}
+
+.fc-value-blue::after {
+  background: var(--fc-ink);
+}
+
+.fc-value-orange::after {
+  background: var(--fc-orange);
+}
+
+.fc-value-teal::after {
+  background: var(--fc-teal);
+}
+
+.fc-value-magenta::after {
+  background: var(--fc-magenta);
+}
+
+
+/* ------------------------------------------------------------------
+   DataTables
+   ------------------------------------------------------------------ */
+
+.fc-table-card table.dataTable thead th {
+  color: #40584F;
+  background: #F7FAF9;
+  border-bottom: 1px solid #CCDCD5 !important;
+  font-weight: 650;
+}
+
+.fc-table-card table.dataTable tbody tr:nth-child(odd) {
+  background: rgba(247,250,249,.7);
+}
+
+.fc-table-card table.dataTable tbody tr:hover {
+  background: var(--fc-teal-wash) !important;
+}
+
+.fc-table-card table.dataTable tbody tr.selected,
+.fc-table-card table.dataTable tbody tr.selected > * {
+  background: var(--fc-ink) !important;
+  color: #FFFFFF !important;
+}
+
+.fc-table-card table.dataTable tbody tr.selected a,
+.fc-table-card table.dataTable tbody tr.selected strong {
+  color: #FFFFFF !important;
+}
+
+
+/* Gene symbols */
+
+.fc-gene-table-card table.dataTable tbody td:first-child {
+  color: var(--fc-ink);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-weight: 750;
+  letter-spacing: .01em;
+}
+
+.fc-gene-table-card table.dataTable tbody tr.selected td:first-child {
+  color: #FFFFFF;
+}
+
+
+/* ------------------------------------------------------------------
+   Pagination
+   ------------------------------------------------------------------ */
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  border-radius: 7px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #FFFFFF !important;
+  border: 1px solid var(--fc-ink) !important;
+  background: var(--fc-ink) !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: var(--fc-ink-dark) !important;
+  border-color: #C6DAD1 !important;
+  background: var(--fc-teal-wash) !important;
+}
+
+
+/* ------------------------------------------------------------------
+   Confidence
+   ------------------------------------------------------------------ */
+
+.fc-confidence-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  padding: .22rem .52rem;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.fc-confidence-high {
+  color: #2F6956;
+  background: #E7F5EE;
+  border: 1px solid #B9DFC9;
+}
+
+.fc-confidence-moderate {
+  color: #8A5C11;
+  background: #FFF3D6;
+  border: 1px solid #EACB72;
+}
+
+.fc-confidence-low {
+  color: #7B536D;
+  background: var(--fc-magenta-wash);
+  border: 1px solid #DFC0D4;
+}
+
+
+/* ------------------------------------------------------------------
+   Population marker chips
+   ------------------------------------------------------------------ */
+
+.fc-marker-chip {
+  color: var(--fc-ink-dark);
+  border-color: #CBD8E8;
+  background: var(--fc-blue-wash);
+}
+
+.fc-marker-chip:nth-child(6n + 2) {
+  color: var(--fc-teal-dark);
+  border-color: #C0E1E5;
+  background: var(--fc-teal-wash);
+}
+
+.fc-marker-chip:nth-child(6n + 3) {
+  color: var(--fc-leaf-dark);
+  border-color: #D9E7AE;
+  background: var(--fc-green-wash);
+}
+
+.fc-marker-chip:nth-child(6n + 4) {
+  color: var(--fc-orange-dark);
+  border-color: #F0D2B6;
+  background: var(--fc-orange-wash);
+}
+
+.fc-marker-chip:nth-child(6n + 5) {
+  color: var(--fc-magenta-dark);
+  border-color: #E3C4D8;
+  background: var(--fc-magenta-wash);
+}
+
+.fc-marker-chip:nth-child(6n + 6) {
+  color: var(--fc-violet-dark);
+  border-color: #D5CCE9;
+  background: var(--fc-violet-wash);
+}
+
+
+/* ------------------------------------------------------------------
+   Generic metadata badges
+   ------------------------------------------------------------------ */
+
+.fc-soft-badge {
+  color: #41675A;
+  background: #EEF5F2;
+  border-color: #CFE0D9;
+}
+
+
+/* ------------------------------------------------------------------
+   Gene detail profile
+   ------------------------------------------------------------------ */
+
+.fc-gene-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+
+  border-left: 4px solid var(--fc-ink);
+  background:
+    linear-gradient(
+      105deg,
+      var(--fc-blue-wash) 0%,
+      #FFFFFF 55%
+    );
+}
+
+.fc-gene-symbol-block h2 {
+  margin-bottom: 0;
+  color: var(--fc-ink-dark);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 2rem;
+}
+
+.fc-gene-metrics {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+}
+
+.fc-gene-metric {
+  min-width: 92px;
+  padding: .6rem .8rem;
+  border: 1px solid #D8E4DE;
+  border-radius: 10px;
+  background: rgba(255,255,255,.75);
+  text-align: center;
+}
+
+.fc-gene-metric strong {
+  display: block;
+  color: var(--fc-ink);
+  font-size: 1.18rem;
+}
+
+.fc-gene-metric span {
+  color: var(--fc-muted-text);
+  font-size: .78rem;
+}
+
+
+/* ------------------------------------------------------------------
+   Evidence rows
+   ------------------------------------------------------------------ */
+
+.fc-gene-evidence-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.fc-gene-evidence-row {
+  display: grid;
+  grid-template-columns:
+    minmax(230px, 1.25fr)
+    minmax(320px, 2fr)
+    auto;
+  gap: 1rem;
+  align-items: center;
+
+  padding: .85rem .2rem;
+  border-bottom: 1px solid #E1E9E5;
+}
+
+.fc-gene-evidence-row:last-child {
+  border-bottom: 0;
+}
+
+.fc-gene-evidence-study {
+  margin-bottom: .16rem;
+  color: #335B4D;
+  font-weight: 700;
+}
+
+.fc-gene-evidence-pop {
+  color: #253C34;
+  font-weight: 550;
+}
+
+.fc-gene-evidence-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+
+.fc-evidence-badge {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: .22rem .48rem;
+  border-radius: 6px;
+  font-size: .76rem;
+  line-height: 1.3;
+}
+
+.fc-evidence-role {
+  color: var(--fc-violet-dark);
+  background: var(--fc-violet-wash);
+}
+
+.fc-evidence-direction {
+  color: var(--fc-orange-dark);
+  background: var(--fc-orange-wash);
+}
+
+.fc-evidence-context {
+  color: var(--fc-teal-dark);
+  background: var(--fc-teal-wash);
+}
+
+
+/* ------------------------------------------------------------------
+   Relationship explorer
+   Preserve its layout, just introduce restrained semantic accents.
+   ------------------------------------------------------------------ */
+
+.fc-detail-card .fc-detail-item,
+.fc-science-section {
+  border-color: #D9E5DF;
+}
+
+.fc-detail-card .fc-detail-label,
+.fc-science-title {
+  color: #54776A;
+}
+
+.fc-doi-link,
+.fc-mini-doi {
+  color: var(--fc-teal-dark);
+}
+
+
+/* ------------------------------------------------------------------
+   Selected population source publication
+   ------------------------------------------------------------------ */
+
+.fc-publication-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.fc-publication-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background:
+    linear-gradient(
+      180deg,
+      var(--fc-teal),
+      var(--fc-ink)
+    );
+}
+
+.fc-publication-title {
+  color: #243E35;
+}
+
+
+/* ------------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+
+  .fc-gene-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .fc-gene-evidence-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* END FibConsensus v2.3 Nature palette */
+

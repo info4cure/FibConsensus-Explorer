@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 128 128" role="img">
+  <defs>
+    <linearGradient id="cellGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D5ECDD"/>
+      <stop offset="100%" stop-color="#7FC5A1"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 30 C38 18,49 22,66 36 S95 54,116 38"
+      stroke="#5D8A72" stroke-width="5"/>
+    <path d="M10 88 C32 72,50 75,68 89 S98 102,118 86"
+      stroke="#91CBAA" stroke-width="5"/>
+    <path d="M23 15 C36 43,36 78,22 112"
+      stroke="#789F8B" stroke-width="4" opacity="0.72"/>
+    <path d="M104 14 C91 42,92 80,106 113"
+      stroke="#A7C0B2" stroke-width="4" opacity="0.72"/>
+    <path d="M28 64 C42 46,53 42,64 44
+      C77 45,88 51,101 64
+      C87 77,76 83,64 84
+      C51 84,41 79,28 64 Z"
+      fill="url(#cellGradient)"
+      stroke="#EAF5EF"
+      stroke-width="3"/>
+    <ellipse cx="64" cy="64" rx="13" ry="9"
+      fill="#24463D" stroke="#D5ECDD" stroke-width="2"/>
+  </g>
+</svg>

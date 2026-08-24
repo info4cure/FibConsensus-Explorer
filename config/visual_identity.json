@@ -1,0 +1,21 @@
+{
+  "name": "FibConsensus Explorer",
+  "concept": "Fibroblast, stroma and extracellular matrix",
+  "palette": {
+    "primary": "#2F5D50",
+    "primary_dark": "#24463D",
+    "deep": "#1F3B33",
+    "accent": "#5D8A72",
+    "accent_light": "#789F8B",
+    "sage": "#A7C0B2",
+    "border": "#D7E5DD",
+    "soft_background": "#EEF5F1",
+    "page_background": "#F7FAF8",
+    "text": "#23352E"
+  },
+  "typography": {
+    "body": "Inter",
+    "headings": "Source Sans 3"
+  },
+  "logo": "Minimal spindle cell with extracellular matrix network"
+}
