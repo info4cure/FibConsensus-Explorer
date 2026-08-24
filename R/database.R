@@ -51,6 +51,37 @@ create_fibconsensus_pool <- function(config) {
   validate_db_environment()
   safe_sql_identifier(config$schema)
 
+  # TEMPORARY Connect Cloud authentication diagnostics.
+  # Never prints the database password itself.
+  .fc_pwd <- Sys.getenv("FIBCONSENSUS_DB_PASSWORD", unset = "")
+  .fc_user <- Sys.getenv("FIBCONSENSUS_DB_USER", unset = "")
+  .fc_host <- Sys.getenv("FIBCONSENSUS_DB_HOST", unset = "")
+  .fc_port <- Sys.getenv("FIBCONSENSUS_DB_PORT", unset = "")
+
+  message("FC_AUTH_DIAG user=", .fc_user)
+  message("FC_AUTH_DIAG host=", .fc_host)
+  message("FC_AUTH_DIAG port=", .fc_port)
+  message("FC_AUTH_DIAG password_present=", nzchar(.fc_pwd))
+  message("FC_AUTH_DIAG password_nchar=", nchar(.fc_pwd, type = "chars"))
+  message("FC_AUTH_DIAG password_nbytes=", nchar(.fc_pwd, type = "bytes"))
+  message(
+    "FC_AUTH_DIAG leading_or_trailing_whitespace=",
+    !identical(.fc_pwd, trimws(.fc_pwd))
+  )
+  .fc_pwd_raw <- as.integer(charToRaw(.fc_pwd))
+  message(
+    "FC_AUTH_DIAG contains_LF_byte=",
+    10L %in% .fc_pwd_raw
+  )
+  message(
+    "FC_AUTH_DIAG contains_CR_byte=",
+    13L %in% .fc_pwd_raw
+  )
+  message(
+    "FC_AUTH_DIAG wrapped_in_quotes=",
+    grepl("^['\\\"]|['\\\"]$", .fc_pwd)
+  )
+
   pool::dbPool(
     drv = RPostgres::Postgres(),
     host = Sys.getenv("FIBCONSENSUS_DB_HOST"),
