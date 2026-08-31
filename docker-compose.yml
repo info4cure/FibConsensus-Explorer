@@ -1,0 +1,27 @@
+services:
+  fibconsensus-explorer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        R_VERSION: "${R_VERSION:-4.4.3}"
+    image: fibconsensus-explorer:1.0.0
+    container_name: fibconsensus-explorer
+    restart: unless-stopped
+    ports:
+      - "${FIBCONSENSUS_HTTP_PORT:-3838}:3838"
+    environment:
+      # Database values are supplied only at runtime.
+      FIBCONSENSUS_DB_HOST: "${FIBCONSENSUS_DB_HOST}"
+      FIBCONSENSUS_DB_PORT: "${FIBCONSENSUS_DB_PORT:-5432}"
+      FIBCONSENSUS_DB_NAME: "${FIBCONSENSUS_DB_NAME}"
+      FIBCONSENSUS_DB_USER: "${FIBCONSENSUS_DB_USER}"
+      FIBCONSENSUS_DB_PASSWORD: "${FIBCONSENSUS_DB_PASSWORD}"
+      FIBCONSENSUS_DB_SSLMODE: "${FIBCONSENSUS_DB_SSLMODE:-require}"
+      FIBCONSENSUS_DB_POOL_MAX: "${FIBCONSENSUS_DB_POOL_MAX:-5}"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:3838/ >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+      retries: 5

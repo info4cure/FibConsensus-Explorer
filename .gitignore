@@ -4,5 +4,8 @@
 .Renviron
 .env
 .env.*
+!.env.example
 rsconnect/
 .DS_Store
+*.bak
+FibConsensus_Docker_FINAL_FREEZE_v1_0_*
