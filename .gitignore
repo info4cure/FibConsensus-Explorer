@@ -9,3 +9,9 @@ rsconnect/
 .DS_Store
 *.bak
 FibConsensus_Docker_FINAL_FREEZE_v1_0_*
+
+# Local deployment / branding work
+.env
+backups/
+patch_navbar_brand_css_v1.py
+.DS_Store

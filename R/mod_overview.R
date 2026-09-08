@@ -5,8 +5,22 @@ mod_overview_ui <- function(id) {
   ns <- NS(id)
 
   tagList(
-    div(class = "fc-section-kicker", "FIBCONSENSUS v2.2"),
-    h1("Resolving cell identity across human skin fibroblast single-cell studies"),
+    div(
+      class = "fc-overview-brand",
+      tags$img(
+        src = "fibconsensus-logo-framework.png?v=1",
+        alt = "FibConsensus — Human Skin Fibroblast Framework",
+        class = "fc-overview-logo"
+      )
+    ),
+    div(
+      class = "fc-section-kicker fc-release-kicker",
+      "EVIDENCE RESOURCE · v2.2"
+    ),
+    h1(
+      class = "fc-overview-title",
+      "Resolving cell identity across human skin fibroblast single-cell studies"
+    ),
     p(
       class = "fc-lead",
       paste(
@@ -60,7 +74,7 @@ mod_overview_ui <- function(id) {
         div(class = "fc-stat-line", strong("1"), " cross-family state axis")
       ),
       card(
-        card_header("Independent atlas evaluation"),
+        card_header("Atlas-based validation"),
         p("The frozen architecture was projected onto an independently constructed cross-disease fibroblast atlas."),
         div(class = "fc-stat-line", strong("166,620"), " fibroblasts"),
         div(class = "fc-stat-line", strong("21"), " datasets"),

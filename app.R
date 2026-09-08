@@ -36,8 +36,8 @@ brand_ui <- div(
   class = "app-brand",
   
   tags$img(
-    src = "favicon.png?v=3",
-    alt = "FibConsensus logo",
+    src = "fibconsensus-symbol.png?v=1",
+    alt = "FibConsensus",
     class = "app-brand-logo"
   ),
   
@@ -77,25 +77,86 @@ ui <- page_navbar(
       type = "text/css",
       href = "population_styles.css"
     ),
+    tags$title("FibConsensus Explorer"),
+
+    tags$link(
+      rel = "icon",
+      type = "image/x-icon",
+      href = "favicon.ico?v=1"
+    ),
     tags$link(
       rel = "icon",
       type = "image/png",
-      href = "favicon.png?v=1"
+      sizes = "32x32",
+      href = "favicon-32x32.png?v=1"
+    ),
+    tags$link(
+      rel = "icon",
+      type = "image/png",
+      sizes = "16x16",
+      href = "favicon-16x16.png?v=1"
     ),
     tags$link(
       rel = "apple-touch-icon",
-      href = "favicon.png?v=1"
+      sizes = "180x180",
+      href = "apple-touch-icon.png?v=1"
     ),
+    tags$link(
+      rel = "manifest",
+      href = "site.webmanifest?v=1"
+    ),
+
     tags$meta(
       name = "description",
       content = paste(
-        "FibConsensus Explorer: evidence-based annotation",
-        "of human skin fibroblasts."
+        "FibConsensus Explorer: an evidence- and provenance-aware",
+        "framework for human skin fibroblast annotation."
       )
     ),
     tags$meta(
       name = "theme-color",
       content = "#2F5D50"
+    ),
+
+    tags$meta(
+      property = "og:title",
+      content = "FibConsensus Explorer"
+    ),
+    tags$meta(
+      property = "og:description",
+      content = paste(
+        "Explore the FibConsensus evidence framework,",
+        "consensus fibroblast architecture, atlas recovery",
+        "and disease-remodelling results."
+      )
+    ),
+    tags$meta(
+      property = "og:type",
+      content = "website"
+    ),
+    tags$meta(
+      property = "og:url",
+      content = "https://01a032e3-4d20-64d8-c899-d46a976377ff.share.connect.posit.cloud/"
+    ),
+    tags$meta(
+      property = "og:image",
+      content = paste0(
+        "https://01a032e3-4d20-64d8-c899-d46a976377ff.share.connect.posit.cloud/",
+        "fibconsensus-social-preview-1280x640.jpg"
+      )
+    ),
+
+    tags$meta(
+      name = "twitter:card",
+      content = "summary_large_image"
+    ),
+    tags$meta(
+      name = "twitter:title",
+      content = "FibConsensus Explorer"
+    ),
+    tags$meta(
+      name = "twitter:description",
+      content = "Evidence-based framework for human skin fibroblast annotation."
     )
   ),
   

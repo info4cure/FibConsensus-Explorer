@@ -1609,7 +1609,7 @@
   },
   "files": {
     "app.R": {
-      "checksum": "506be3d06ca4f19a2b0d82443f1e9fea"
+      "checksum": "4f83ae649a5329192902521dc5f1bddc"
     },
     "config/visual_identity.json": {
       "checksum": "5946eee9281b621c5e2a619a78e65f5d"
@@ -1636,7 +1636,7 @@
       "checksum": "fa1172e62319a5e522ad703e182a9ae5"
     },
     "R/mod_overview.R": {
-      "checksum": "f620f21e514ba55a016258b66c87a009"
+      "checksum": "b063efab550f870857dc1085c7cf8553"
     },
     "R/mod_populations.R": {
       "checksum": "b9bf5eee7f876ef7396621ca95ca9388"
@@ -1644,8 +1644,20 @@
     "R/utils.R": {
       "checksum": "422c98d8db57ecd8cb0ff568d3f8db0f"
     },
-    "README.md": {
-      "checksum": "c05976f3037262120bfea33d613fe3d7"
+    "www/apple-touch-icon.png": {
+      "checksum": "bd7717fb19b80def530290af2a76eb95"
+    },
+    "www/favicon-16x16.png": {
+      "checksum": "db3eddbc26cc98daa775a152c8d4dbb1"
+    },
+    "www/favicon-32x32.png": {
+      "checksum": "b77812e6442a06c08ce2be0edc5d3f16"
+    },
+    "www/favicon-48x48.png": {
+      "checksum": "82790ac6fafe2997ec8528e1061470c2"
+    },
+    "www/favicon.ico": {
+      "checksum": "0130727220fb729cae3f7a7441233bda"
     },
     "www/favicon.png": {
       "checksum": "4ad5de3c8993d81ecae72e3156d9a734"
@@ -1656,8 +1668,29 @@
     "www/fibconsensus_logo.svg": {
       "checksum": "504741a1b3775743248b77ee09134c8f"
     },
+    "www/fibconsensus-logo-compact.png": {
+      "checksum": "65e882e0ef48541e812ec6c6e39cfbf7"
+    },
+    "www/fibconsensus-logo-framework.png": {
+      "checksum": "eb3ed105879b68ec27d4bd66b86b3620"
+    },
+    "www/fibconsensus-logo-horizontal.png": {
+      "checksum": "e367712c04bee6c64f1baf31aa0a3818"
+    },
+    "www/fibconsensus-social-preview-1280x640.jpg": {
+      "checksum": "4b99fd56a1e0e9efe5397f9622c69027"
+    },
+    "www/fibconsensus-symbol.png": {
+      "checksum": "119b698606827c354bd6b10b037969de"
+    },
     "www/hero.png": {
       "checksum": "676e301d100dd6fa286260492c6fe338"
+    },
+    "www/icon-192.png": {
+      "checksum": "0b789cc9929c037af30f1c2f1b2e01c6"
+    },
+    "www/icon-512.png": {
+      "checksum": "840934af6ceb694006016687aa9ec314"
     },
     "www/overview_styles.css": {
       "checksum": "de98d5e343ccee3deb9e345073afb982"
@@ -1668,8 +1701,11 @@
     "www/population_styles.css": {
       "checksum": "7be4f972a393c518cd30b55865030383"
     },
+    "www/site.webmanifest": {
+      "checksum": "1f98887476bc63ad66e58a4045e593c2"
+    },
     "www/styles.css": {
-      "checksum": "2bbfb00d1f8e9c18dfc943028b2bea74"
+      "checksum": "11959ec2b8085f66d2241428d95e9726"
     }
   },
   "users": null
