@@ -15,3 +15,4 @@ FibConsensus_Docker_FINAL_FREEZE_v1_0_*
 backups/
 patch_navbar_brand_css_v1.py
 .DS_Store
+patch_explorer_citation_v1.py

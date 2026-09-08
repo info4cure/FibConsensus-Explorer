@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: >-
+  If you use FibConsensus Explorer, please cite the Explorer software and,
+  when using the scientific evidence resource, also cite the FibConsensus
+  v2.2 archived release.
+title: "FibConsensus Explorer"
+type: software
+version: "1.0.0"
+date-released: "2026-08-31"
+license: MIT
+authors:
+  - family-names: "Gay-Mimbrera"
+    given-names: "Jesús"
+  - family-names: "Dávila-Flores"
+    given-names: "Viviana"
+  - family-names: "Rivera-Ruiz"
+    given-names: "Irene"
+  - family-names: "Sanz-Cabanillas"
+    given-names: "Juan Luis"
+  - family-names: "Gómez-García"
+    given-names: "Francisco"
+  - family-names: "Hu"
+    given-names: "Benjamin D."
+  - family-names: "He"
+    given-names: "Helen"
+  - family-names: "López-Viñau"
+    given-names: "Teresa"
+  - family-names: "Isla-Tejera"
+    given-names: "Beatriz"
+  - family-names: "Guttman-Yassky"
+    given-names: "Emma"
+  - family-names: "Ruano"
+    given-names: "Juan"
+    affiliation: "IMIBIC; Reina Sofía University Hospital; University of Córdoba"
+repository-code: "https://github.com/info4cure/FibConsensus-Explorer"
+url: "https://01a032e3-4d20-64d8-c899-d46a976377ff.share.connect.posit.cloud/"
+abstract: >-
+  Public read-only interactive interface to the FibConsensus human skin
+  fibroblast evidence framework. The Explorer provides access to study
+  provenance, author-reported populations, marker evidence, adjudicated
+  cross-study relationships, consensus architecture, atlas-based validation
+  and disease-remodelling summaries associated with the frozen FibConsensus
+  v2.2 scientific resource.
+keywords:
+  - fibroblast
+  - skin
+  - single-cell RNA sequencing
+  - cell annotation
+  - evidence framework
+  - Shiny
+  - interactive resource
+  - FibConsensus

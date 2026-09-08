@@ -365,7 +365,7 @@ mod_about_server <- function(id, config) {
                   ),
                   tags$li(
                     paste(
-                      "Independent evaluation against harmonised",
+                      "Atlas-based validation against harmonised",
                       "cross-disease single-cell data."
                     )
                   )
@@ -432,18 +432,78 @@ mod_about_server <- function(id, config) {
               class = "about-card",
               div(
                 class = "about-card-header",
-                "Citation"
+                "How to cite"
               ),
               div(
                 class = "about-card-body",
+
+                p(
+                  tags$strong("FibConsensus Explorer")
+                ),
+
                 div(
                   class = "about-citation",
                   paste(
-                    "When using this resource, cite the accompanying",
-                    "FibConsensus manuscript and report both the application",
-                    "version and database release shown on this page.",
-                    "The final bibliographic citation will be added following",
-                    "publication."
+                    "Gay-Mimbrera J, Dávila-Flores V, Rivera-Ruiz I,",
+                    "Sanz-Cabanillas JL, Gómez-García F, Hu BD, He H,",
+                    "López-Viñau T, Isla-Tejera B, Guttman-Yassky E,",
+                    "Ruano J. FibConsensus Explorer: interactive interface",
+                    "to the FibConsensus human skin fibroblast evidence",
+                    "framework. Version 1.0.0. 2026."
+                  ),
+                  tags$br(),
+                  tags$a(
+                    href = paste0(
+                      "https://01a032e3-4d20-64d8-c899-",
+                      "d46a976377ff.share.connect.posit.cloud/"
+                    ),
+                    target = "_blank",
+                    rel = "noopener noreferrer",
+                    "https://01a032e3-4d20-64d8-c899-d46a976377ff.share.connect.posit.cloud/"
+                  )
+                ),
+
+                p(
+                  style = "margin-top: .9rem;",
+                  tags$strong("Scientific evidence resource")
+                ),
+
+                p(
+                  paste(
+                    "When analyses or conclusions rely on the underlying",
+                    "FibConsensus scientific resource, please also cite the",
+                    "archived FibConsensus v2.2 release."
+                  )
+                ),
+
+                tags$dl(
+                  class = "about-detail-grid",
+                  tags$dt("v2.2 DOI"),
+                  tags$dd(
+                    tags$a(
+                      href = "https://doi.org/10.5281/zenodo.22212254",
+                      target = "_blank",
+                      rel = "noopener noreferrer",
+                      "10.5281/zenodo.22212254"
+                    )
+                  ),
+                  tags$dt("Concept DOI"),
+                  tags$dd(
+                    tags$a(
+                      href = "https://doi.org/10.5281/zenodo.22181280",
+                      target = "_blank",
+                      rel = "noopener noreferrer",
+                      "10.5281/zenodo.22181280"
+                    )
+                  ),
+                  tags$dt("Source code"),
+                  tags$dd(
+                    tags$a(
+                      href = "https://github.com/info4cure/FibConsensus-Explorer",
+                      target = "_blank",
+                      rel = "noopener noreferrer",
+                      "github.com/info4cure/FibConsensus-Explorer"
+                    )
                   )
                 )
               )
